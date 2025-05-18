@@ -121,7 +121,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            max-width: 800px;
+            max-width: 300px;
             margin: 40px auto;
             border-radius: 20px;
             overflow: hidden;
@@ -299,7 +299,7 @@
             My Honeyku 💖 [Mirta Chadhirotin Nachlah],
         </h2>
         <p style="margin: 20px 0; line-height: 1.8;">
-            [ Di hari yang spesial ini, aku mendoakan semoga panjang umur, sehat selalu, semoga lulus tepat waktu, semoga di mudahkan dalam karir, sukses dunia dan akhirat, bisa membahagiakan kedua orang tua mu dan semoga kita berjodoh. aamiin ya allah]
+            [ Di hari yang spesial ini, aku mendoakan semoga panjang umur, sehat selalu, semoga lulus tepat waktu, semoga di mudahkan dalam karir, sukses dunia dan akhirat, bisa membahagiakan kedua orang tua mu ,semoga kita berjodoh dan selalu bareng terus sampai nikah nanti. aamiin ya allah]
         </p>
         <button onclick="closeLoveLetter()" class="interactive-button">Tutup</button>
     </div>
@@ -316,13 +316,12 @@
                        <div class="countdown-container" id="countdown"></div>
         </div>
         <!-- Video Section -->
-        <div class="video-container">
-            <video controls autoplay muted loop>
-                <source src="our-memory-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
+  <div class="video-container">
+    <video controls autoplay loop>
+        <source src="birthday.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
        <div class="glass-card">
         <h2>Our Memory Gallery 💖</h2>
         <div class="photo-gallery">
@@ -354,7 +353,7 @@
 
 
       <div class="button-container">
-    <button class="interactive-button" onclick="showLoveLetter()">
+    <button id="myAudio" class="interactive-button" onclick="showLoveLetter()">
         Buka Surat Cinta Rahasia 💌
     </button>
 </div>
@@ -370,7 +369,7 @@
 
     // Jika waktu sudah lewat, set ke 0
     if (diff < 0) {
-        document.getElementById('countdown').innerHTML = "<div>Anniversary telah tiba! 🎉</div>";
+        document.getElementById('countdown').innerHTML = "<div>Cie ada yang umur bertambah nih! 🎉</div>";
         return;
     }
 
@@ -414,26 +413,6 @@ setInterval(updateCountdown, 1000);
             document.querySelector('.overlay').style.display = 'none';
         }
 
-        // Music Player
-        const audio = new Audio('lagu-favorit.mp3'); // Ganti dengan file musik
-        let isPlaying = false;
-
-        function toggleMusic() {
-            if(isPlaying) {
-                audio.pause();
-            } else {
-                audio.play();
-            }
-            isPlaying = !isPlaying;
-            document.querySelector('.music-player').innerHTML = 
-                isPlaying ? '⏸️' : '▶️';
-        }
-
-        // Initialize
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        document.querySelector('.music-player').addEventListener('click', toggleMusic);
     </script>
  <script>
         // Tambahkan fungsi ini di dalam tag script
